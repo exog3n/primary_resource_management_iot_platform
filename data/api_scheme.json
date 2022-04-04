@@ -1,0 +1,46 @@
+{
+  "deviceMap": {
+    id: String,
+    title: String,
+    nodes: [{
+      rmc_id: String, // microcontroller db id
+      ci_id: String, // communication interface db id
+      devices: [{
+        io: String, // the local pin or port
+        device_id: String // device db id
+      }]
+    }]
+  }
+
+  "measurement" = {
+    id: String,
+    value: String,
+    timestamp: String,
+    device_id: String,
+    payload_id: String
+  }
+
+  "event" = {
+    id: String,
+    value: String,    // on or off
+    timestamp: Date,
+    device_id: String,
+    payload_id: String,
+  }
+
+  "payload" = {
+    id: String,
+    message: Object,
+    timestamp: Date,
+    type: String,   // uplink or Downlink
+    ci_id: String,
+  }
+
+  "action" = {
+    id: String,
+    timestamp: Date,
+    device_ids: [String], // array of devices
+
+    value: String   // on or off
+  }
+}

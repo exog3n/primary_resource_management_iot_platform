@@ -1,0 +1,65 @@
+{
+  "system_config": {
+    "tasks": {
+      "supply": "supply"
+    },
+    "specifications": {
+      "flow": "flowmeter",
+      "valve": "relay_valve"
+    },
+    "communication": {
+      "ttsIp": "172.21.0.10",
+      "ttsBearer": "",
+      "protocol": {
+        "payloadType": "text",
+        "flags": {
+          "operation_profile": "o",
+          "action": "a",
+          "report": "r",
+          "sync": "s",
+          "forward": "f",
+          "continue": "c",
+          "single": "s",
+          "batch": "b",
+          "time": "n",
+          "instruction": "i",
+          "measurement": "m",
+          "event": "e",
+          "trigger": "t",
+          "date": "d",
+          "init": "0",
+          "ping": "1",
+          "on": "1",
+          "off": "0",
+          "standard_block_separator": "_",
+          "single_block_separator": "s",
+          "value_separator": ";"
+        },
+        "edge":{
+          "maxPayloadSize": "50",
+          "reportsDecimalPlaces":"2",
+          "minimumUplinkInterval": "60",
+          "alive": "60000",
+          "initRetry": "60",
+          "defaultUplinkInterval": "10",
+          "actionFaultThreshold": "120",
+          "defaultDevGroup":"d"
+        }
+      }
+    }
+  },
+  "operation_setup": {
+    "supply": {
+      "in": {
+        "flow": {
+          "mSec": 5,
+          "uSec": 30
+        }
+      },
+      "out": {
+        "valve": {
+        }
+      }
+    }
+  }
+}
